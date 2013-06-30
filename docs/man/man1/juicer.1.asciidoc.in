@@ -102,6 +102,11 @@ Test connection settings in *~/.juicer.conf*
 *ENVIRONMENT*::
 The environments to limit connecting testing to.
 
+LIST-CARTS
+----------
+usage: juicer list-carts
+
+List carts stored remotely.
 
 PULL
 ----

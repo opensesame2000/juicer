@@ -97,3 +97,7 @@ def hello(args):
 def promote(args):
     pulp = j(args)
     pulp.promote(cart_name=args.cartname)
+
+def list_carts(args):
+    pulp = j(args)
+    pulp.list_carts()

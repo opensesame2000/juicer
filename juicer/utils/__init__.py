@@ -719,3 +719,20 @@ def search_carts(env, pkg_name, repos):
         for cart in carts.find({field: {'$regex': value}}):
             found_carts.append(cart)
         return found_carts
+
+def list_carts(env):
+    """
+    returns a list of carts stored remotely
+
+    env: the name of an environment from the juicer config
+    """
+
+    db = cart_db()
+    carts = db[env]
+
+    found_carts = []
+
+    for cart in carts.find({}, {'name': 1}):
+        found_carts.append(cart)
+
+    return found_carts

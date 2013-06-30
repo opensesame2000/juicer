@@ -211,3 +211,10 @@ class Parser(object):
                 help='The name of the cart to promote')
 
         parser_promote.set_defaults(j=juicer.juicer.promote)
+
+        ##################################################################
+        # create the 'list-carts' sub-parser
+        parser_list_carts = subparsers.add_parser('list-carts', \
+                help='List carts stored remotely.')
+
+        parser_list_carts.set_defaults(j=juicer.juicer.list_carts)

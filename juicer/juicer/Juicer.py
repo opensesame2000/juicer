@@ -348,6 +348,15 @@ class Juicer(object):
 
         self.publish(cart)
 
+    def list_carts(self):
+        """
+        List carts stored remotely.
+        """
+        for cart in sorted(juicer.utils.list_carts(self._defaults['environments'][0]),
+                           key=lambda cart: cart['_id']):
+            juicer.utils.Log.log_info("%s", cart['_id'])
+        return True
+
     def sign_cart_for_env_maybe(self, cart, env=None):
         """
         Sign the items to upload, if the env requires a signature.
