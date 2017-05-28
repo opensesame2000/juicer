@@ -37,6 +37,7 @@ class Juicer(object):
                     raise JuicerKeyError("%s is not an environment defined in juicer.conf" % env)
 
     # this is used to upload carts to pulp
+	# opensesame modified this file
     def upload(self, env, cart):
         """
         Nothing special happens here. This method recieves a
